@@ -101,7 +101,6 @@ function startGame() {
 
         if (ballTop >= (playingAreaHeight - rodHeight - ballHeight)) {
             var ballPos = (ballLeft + (3 * ballWidth / 4));
-            console.log('entered start');
             if (ballPos >= rods[0].offsetLeft && (ballLeft + (ballWidth / 4)) <= rods[0].offsetLeft + rodWidth) {
                 topOperation = "-";
                 scoreSpeed = getScoreSpeed(ballMovingSpeed);
