@@ -1,0 +1,240 @@
+:root {
+    --ballColor: linear-gradient(90deg, #D3CCE3 0%, #E9E4F0 100%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    font-family: sans-serif;
+    background: linear-gradient(125deg, #c31432, #240b36);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.playing-area {
+    width: 900px;
+    height: 700px;
+    background-image: linear-gradient(90deg, #227601 0%, #00b017 100%);
+    position: relative;
+    box-shadow: -2px 0 20px 2px black;
+}
+
+.playing-area .rod {
+    width: 150px;
+    height: 20px;
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.playing-area .bottom-rod {
+    bottom: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.playing-area .top-rod {
+    top: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.playing-area .ball {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: var(--ballColor);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.playing-area .pause {
+    border-left: 30px solid #b81111;
+    border-right: 30px solid #b81111;
+    height: 120px;
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.playing-area .msg {
+    width: 80%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    color: black;
+    font-size: 2.5rem;
+    font-weight: 600;
+    opacity: 0.7;
+    text-align: center;
+}
+
+.details-area {
+    width: 300px;
+    height: 700px;
+    background: #5f5f5f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 0 20px 2px black;
+}
+
+.details-area .control-buttons {
+    width: inherit;
+    height: 50px;
+    background: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.details-area .control-buttons button {
+    width: 50%;
+    height: inherit;
+    background: #22c7a1;
+    color: black;
+    outline: none;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.details-area .control-buttons button:nth-child(1) {
+    border-right: 0.5px solid black;
+}
+
+.details-area .control-buttons button:nth-child(2) {
+    border-left: 0.5px solid black;
+}
+
+.details-area .control-buttons button:hover {
+    background: #005f49;
+    color: white;
+}
+
+.details-area .avatar {
+    width: inherit;
+    height: 200px;
+    background: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.details-area .avatar img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+}
+
+.details-area .player-name {
+    width: inherit;
+    height: 50px;
+    border-bottom: 2px solid black;
+    background: inherit;
+    color: #ffb807;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.details-area .scoreboard {
+    width: inherit;
+    height: 400px;
+}
+
+.details-area .scoreboard .total-scoreboard {
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to right, #41295a, #2f0743);
+    display: none;
+}
+
+.details-area .scoreboard .total-scoreboard table {
+    width: inherit;
+    border: 1px solid black;
+    border-spacing: 0;
+    text-align: center;
+}
+
+.details-area .scoreboard .total-scoreboard table td {
+    padding: 10px 15px;
+}
+
+.details-area .scoreboard .total-scoreboard table thead {
+    font-size: 1.5rem;
+    font-weight: 600;
+    background: #ffed87;
+    color: black;
+}
+
+.details-area .scoreboard .total-scoreboard table tbody {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+}
+
+.details-area .scoreboard .total-scoreboard table tbody tr:nth-child(odd) {
+    background: #323C50;
+}
+
+.details-area .scoreboard .total-scoreboard table tbody tr:nth-child(even) {
+    background: #222631;
+}
+
+.details-area .scoreboard .total-scoreboard table tbody tr:nth-child(6) {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.details-area .scoreboard .round-scoreboard {
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to right, #41295a, #2f0743);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.details-area .scoreboard .round-scoreboard {
+    color: white;
+}
+
+.details-area .scoreboard .round-scoreboard p {
+    margin: 0;
+    font-size: 7rem;
+}
+
+audio {
+    display: none;
+}

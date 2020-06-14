@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Ping Pong</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="Assets/css/index.css">
+    </head>
+
+    <body>
+        
+        <div class="main">
+            <div class="playing-area">
+                <div class="rod top-rod"></div>
+                <div class="rod bottom-rod"></div>
+                <div class="ball"></div>
+                <div class="pause"></div>
+                <div class="msg">
+                    Click on New Game to Start
+                </div>
+            </div>
+    
+            <div class="details-area">
+                <div class="control-buttons">
+                    <button onclick="newGame()">New Game</button>
+                    <button onclick="resetGame()">Reset Game</button>
+                </div>
+                <div class="avatar">
+                    <img src="Assets/images/avatar.jpg" alt="avatar" />
+                </div>
+                <div class="player-name">
+                    <h1></h1>
+                </div>
+    
+                <div class="scoreboard">
+                    <div class="total-scoreboard">
+                        <table>
+                            <thead>
+                                <td>Rounds</td>
+                                <td>Score</td>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="round-scoreboard">
+                        <h2></h2>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="./Assets/js/index.js"></script>
+
+    </body>
+</html>
